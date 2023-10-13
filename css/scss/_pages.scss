@@ -1,0 +1,357 @@
+html,body{
+
+}
+.all-menu{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    background: #252525;
+    padding: 22px 0;
+    display: none;
+    >{
+        div{
+            display: flex;
+            justify-content: space-between;
+            ul{
+                display: flex;
+                flex-direction: column;
+                font-size: 0.8em;
+                li{
+                    height: 26px;
+                    &:first-child{
+                        font-weight: 900;
+                        color: #e4a101;
+                    }
+                    a{
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        color: #ffffff57;
+                        &:hover{
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+main{
+    position: relative;
+    section{
+        &.slider-area{
+            padding: 46px 0;
+            .container-fluid{
+                .gifs-wrapper{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    img{
+                        width: calc(100% / 5 - 10px);
+                    }
+                }
+                aside{
+                    .login-wrapper{
+                        background: #252525;
+                        width: 100%;
+                        height: 247px;
+                    }
+                }
+            }
+        }
+        &.second-section{
+            padding: 30px 0;
+            .community-sidebar{
+                .widget{
+                    .tab-content{
+                        .new-list{
+                            li{
+                                margin-bottom: 10px;
+                                a{
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 0.8em;
+                                    gap: 5px;
+                                    color: #252525;
+                                    img{
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 4px;
+                                        object-fit: cover;
+                                    }   
+                                    .top{
+                                        display: flex;
+                                        gap: 5px;
+                                        margin-bottom: 3px;     
+                                        .post-title{
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            max-width: 151px;
+                                            font-weight: 900;
+                                        }            
+                                    }   
+                                    .bottom{
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 5px;
+                                        .user{
+                                            border-right: 1px solid #00000054;
+                                            padding-right:5px;
+                                        }
+                                        .count{
+                                            color: red;
+                                        }
+                                    }       
+                                    &:hover{
+                                        .top{
+                                            .post-title{
+                                                color: rgb(255, 121, 121);
+                                            }            
+                                        }   
+                                    }               
+                                }
+                            }
+                            &.comment{
+                                li{
+                                    a{
+                                        img{
+                                            border-radius: 100px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .share-icon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin-top: 10px;
+                    a{
+                        display: block;
+                        border-radius: 100px;
+                        width: calc(100% / 7 - 4px);
+                        overflow: hidden;
+                        aspect-ratio: 1/1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        filter: grayscale(0);
+                        transition: 0.5 ease;
+                        &:hover{
+                            filter: grayscale(1);
+                        }
+                    }
+                }
+                .side-profile{
+                    .profile-top{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        .left{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            img{
+                                border-radius: 100px;
+                                width: 50px;
+                                height: 50px;
+                                object-fit: cover;
+                            }
+                            .profile-details{
+                                display: flex;
+                                flex-direction: column;
+                                .username{
+                                    font-weight: 900;
+                                    color: #000;
+                                    margin-bottom: 0;
+                                }
+                                .sub-details{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 5px;
+                                    span{
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .profile-bottom{
+                        display: flex;
+                        flex-direction: column;
+                        a{
+                            padding: 5px 10px;
+                            margin-top: 10px;
+                            border-radius: 5px;
+                            background: #434343;
+                            color: #fff !important;
+                            display: flex;
+                            align-items: center;
+                            &:hover{
+                                background-color: #e4a101;
+                                color: #000 !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .side-gif{
+                width: 100%;
+                margin-top: 10px;
+                img{
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+            }
+            .most-pop{
+                .tab-content{
+                    padding: 5px;
+                    .with-badge{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 2px;
+                    }
+                }
+            }
+            .main-feed{
+                .feed-content{
+                    .feed-top{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 5px;
+                        &.horizontal{
+                            flex-direction: column;
+                        }
+                    }
+                    .my-card{
+                        width: calc(100% / 3);
+                        .card-foot{
+                            font-size: 0.8em;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 99%;
+                            a{
+                            }
+                        }
+                    }
+                    &.feed-content-right{
+                        display: flex;
+                        gap: 8px;
+                        .feed-top{
+                            flex-direction: column;
+                            width: fit-content;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                        }
+                        .card-bottom-link{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            font-size: 0.8em;
+                            .new-icon{
+                                border-radius: 2px;
+                                padding: 0 3px;
+                            }
+                            .ellipsis{
+                                max-width: 112px;
+                            }
+                        }
+                        .my-card{
+                            height: calc(100% / 3);
+                            width: 162px;
+                        }
+                        .post-list{
+                            li{
+                                a{
+                                    >{
+                                        div{
+                                            white-space: nowrap;
+                                            max-width: 90%;
+                                            text-overflow: ellipsis;
+                                            overflow: hidden;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.feed-full{
+                        .feed-top{
+                            flex-direction: column;
+                        }
+                        .my-card{
+                            width: 100%;
+                            height: fit-content;
+                            min-height: 0;
+                            &.horizontal{
+                                .card-bod{
+                                    img{
+                                        width: 84px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background: #1b1b1b;
+    width: 100%;
+    height: fit-content;
+    font-size: 0.7em;
+    .container-full-padding{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            align-items: center;
+            height: 66px;
+            &.footer-left,&.footer-right{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                li{
+                    padding: 0px 10px;
+                    &:not(:first-child){
+                        border-left: 1px solid #ffffff26;
+                    }
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-foot{
+        text-align: center;
+        border-top: 1px solid #ffffff26;
+        padding: 15px;
+        background: #252525;
+        span{
+            color: #ffffffb4;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+    }
+}
