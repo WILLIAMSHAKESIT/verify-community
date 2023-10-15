@@ -12,6 +12,17 @@ html,body{
     align-items: center;
     justify-content: center;
 }
+.hot-icon{
+    width: 23px;
+    height: 23px;
+    max-width: 23px;
+    max-height: 18px;
+    background: #4479ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 a{
     color: #000;
     &:hover{
@@ -59,4 +70,11 @@ h1, h2, h3, h4, h5, h6{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+.nav{
+    gap: 3px;
+}
+
+.pattern{
 }
