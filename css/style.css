@@ -585,7 +585,7 @@ ul.minicart .cart-content a:hover,
 }
 
 .navbar-wrap ul li:hover > a {
-  color: #1c1121;
+  color: #1c1121 !important;
 }
 
 .navbar-wrap ul li.show,
@@ -852,6 +852,10 @@ ul.minicart .cart-price .new {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
+}
+
+.navbar-wrap ul li:hover > .submenu li:hover a {
+  color: #e8a301 !important;
 }
 
 .navbar-wrap ul li > .submenu li a::before,
