@@ -44,6 +44,30 @@ class Layout {
             'top': newPosition + 'px'
         });
     }
+    toggleEmoji(){
+        $('.emoticon-box').hide()
+        $('emoji-picker').toggle()
+    }
+    toggleStickers(){
+        $('emoji-picker').hide()
+        $('.emoticon-box').toggle()
+    }
+    changeProfileEmoji(event){
+        $('.change-profile .profile-wrapper').html(`<h1>${event.detail.emoji.unicode}</h1>`)
+    }
+    changeSticker(_this){
+        let stickerSrc = $(_this).attr('src')
+        $('.change-profile .profile-wrapper').html(`<img src="${stickerSrc}" alt="">`)
+    }
+    insertEmoji(event){
+        var currentCursorPosition = $('#myTextArea')[0].selectionStart;
+        var textToInsert = `${event.detail.emoji.unicode}`;
+
+        var currentValue = $('#myTextArea').val();
+        var newValue = currentValue.substring(0, currentCursorPosition) + textToInsert + currentValue.substring(currentCursorPosition);
+
+        $('#myTextArea').val(newValue);
+    }
 }
 
 $(document).ready(function(){
@@ -56,4 +80,38 @@ $(document).ready(function(){
     $(window).scroll(function(event){
         layout.sideBannerStick(this)
     });
+    document.addEventListener(
+        "click",
+        function(event) {
+            var target = event.target;
+            var replyForm;
+            if (target.matches("[data-toggle='reply-form']")) {
+                replyForm = document.getElementById(target.getAttribute("data-target"));
+                replyForm.classList.toggle("d-none");
+            }
+        },
+        false
+    );
+    $('.emoji i').click(function(){
+        layout.toggleEmoji()
+    })
+    $('.comment-form emoji-picker').on('emoji-click', function(event) {
+        layout.insertEmoji(event)
+    });
+    CKEDITOR.replace('editor1', {
+        height: 300,
+        toolbar: 'Basic'
+    });
+    $('.change-profile .btn:nth-child(2)').click(function(){
+        layout.toggleEmoji()
+    })
+    $('.change-profile .btn:nth-child(1)').click(function(){
+        layout.toggleStickers()
+    })
+    $('.change-profile emoji-picker').on('emoji-click', function(event) {
+        layout.changeProfileEmoji(event)
+    });
+    $('.emoticon-box img').click(function(){
+        layout.changeSticker(this)
+    })
 })

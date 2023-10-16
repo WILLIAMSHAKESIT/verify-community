@@ -133,24 +133,11 @@ main{
                     }
                 }
                 .share-icon{
-                    display: flex;
-                    align-items: center;
                     justify-content: space-around;
-                    margin-top: 10px;
                     a{
-                        display: block;
-                        border-radius: 100px;
                         width: calc(100% / 7 - 4px);
                         overflow: hidden;
                         aspect-ratio: 1/1;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        filter: grayscale(0);
-                        transition: 0.5 ease;
-                        &:hover{
-                            filter: grayscale(1);
-                        }
                     }
                 }
                 .side-profile{
@@ -302,6 +289,72 @@ main{
                                 .card-bod{
                                     img{
                                         width: 84px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .board-content-wrapper{
+                .top-bar{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .top-bar-left{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        i{
+                            font-size: 3em;
+                            color: #000;
+                        }
+                    }
+                    .top-bar-right{
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+                .board-content-view{
+                    .content-reaction{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 6px;
+                        .btn{
+                            width: 200px;
+                            background-color: #cecece;
+                            &.liked{
+                                color: rgb(228 161 1) !important;
+                                background-color: #646464;
+                            }
+                        }
+                    }
+                    .comments-section{
+                        border-top: 1px solid #0000001f;
+                        padding-top: 16px;
+                        .comments-header{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .bottom-btns{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+                                gap: 10px;
+                                .btn{
+                                    padding: 10px;
+                                    margin: 0;
+                                }
+                            }
+                            .right{
+                                display: flex;
+                                gap: 5px;
+                                .btn{
+                                    font-size: 0.8em;
+                                    &:not(.btn-primary){
+                                        background: #cecece;
                                     }
                                 }
                             }
