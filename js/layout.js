@@ -68,6 +68,27 @@ class Layout {
 
         $('#myTextArea').val(newValue);
     }
+    scrollFunction(_this){
+        100 < $(_this).scrollTop() ? $(".scroll-top").fadeIn() : $(".scroll-top").fadeOut();
+        if(window.innerWidth > 1000){
+            10 < $(_this).scrollTop() ? $('.navbar-custom').addClass('active-bg') : $('.navbar-custom').removeClass('active-bg');
+        }
+    }
+    toTop(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+        return (
+            $("html, body").animate(
+                {
+                    scrollTop: 0,
+                },
+                600
+            ),
+            !1
+        );
+    }
 }
 
 $(document).ready(function(){
@@ -98,10 +119,6 @@ $(document).ready(function(){
     $('.comment-form emoji-picker').on('emoji-click', function(event) {
         layout.insertEmoji(event)
     });
-    CKEDITOR.replace('editor1', {
-        height: 300,
-        toolbar: 'Basic'
-    });
     $('.change-profile .btn:nth-child(2)').click(function(){
         layout.toggleEmoji()
     })
@@ -114,4 +131,14 @@ $(document).ready(function(){
     $('.emoticon-box img').click(function(){
         layout.changeSticker(this)
     })
+    $(window).scroll(function () {
+        layout.scrollFunction(this)
+    }),
+    $(".scroll-top").on("click", function () {
+        layout.toTop()
+    })
+    CKEDITOR.replace('editor1', {
+        height: 300,
+        toolbar: 'Basic'
+    });
 })

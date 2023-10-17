@@ -873,3 +873,17 @@ details.comment[open] {
         }
     }
 }
+
+.scroll-top{
+    position: fixed;
+    bottom: 63px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background: #e9a301;
+    border: unset;
+    color: #fff;
+    z-index: 20000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3882352941);
+    cursor: pointer;
+}

@@ -8864,6 +8864,20 @@ details.comment summary::-webkit-details-marker {
   aspect-ratio: 1/1;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: 63px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: #e9a301;
+  border: unset;
+  color: #fff;
+  z-index: 20000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3882352941);
+  cursor: pointer;
+}
+
 html, body {
   position: relative;
   color: #919191;
@@ -8998,4 +9012,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .hidden {
   display: none;
+}
+
+.main-height {
+  min-height: 400px;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.input-group-text {
+  color: #e4a101 !important;
+  background-color: #000000 !important;
+}
+
+.form-control:focus {
+  border-color: #717171;
+  box-shadow: unset !important;
 }/*# sourceMappingURL=style.css.map */
