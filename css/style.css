@@ -8640,6 +8640,7 @@ label {
 }
 .table thead th {
   color: #000;
+  vertical-align: middle;
 }
 .table tbody tr {
   cursor: pointer;
@@ -8894,7 +8895,7 @@ details.comment summary::-webkit-details-marker {
 
 .scroll-top {
   position: fixed;
-  bottom: 63px;
+  bottom: 30px;
   right: 30px;
   width: 40px;
   height: 40px;
@@ -9077,6 +9078,11 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background-color: #3e3e3e;
+  color: #fff !important;
+}
+
 @media (max-width: 1812px) {
   .container-full-padding {
     padding: 0 205px;
@@ -9140,10 +9146,10 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .navbar-wrap ul li {
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
   }
   .navbar-wrap ul li a {
-    padding: 18px 20px !important;
+    padding: 10px 20px !important;
   }
   .navbar-wrap ul li > .submenu {
     display: none;
@@ -9160,10 +9166,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .navbar-wrap ul li:hover > .submenu li {
     border: unset;
+  }
+  .navbar-wrap ul li:hover > .submenu li:not(:last-child) {
     border-bottom: 1px solid rgba(85, 85, 85, 0.631372549);
   }
   .navbar-wrap ul li:hover > .submenu li a {
-    padding: 12px 20px !important;
+    padding: 0 20px !important;
   }
   #mobile-menu {
     position: absolute;
@@ -9191,9 +9199,15 @@ h1, h2, h3, h4, h5, h6 {
   header .bottom-menu .telegram {
     font-size: 3em;
   }
+  main section.slider-area .container-fluid .gifs-wrapper {
+    gap: 5px;
+  }
+  main section.second-section {
+    padding: 15px 0;
+  }
   main section.second-section.join-sign .community-widget {
     padding: 15px !important;
-    width: calc(100% - 54px);
+    width: calc(100% - 29px);
     height: -moz-fit-content;
     height: fit-content;
     margin: auto;
@@ -9341,6 +9355,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 500px) {
+  .my-tab.sub-tab li a {
+    font-size: 12px;
+    text-align: center;
+  }
   .global-input {
     right: 101px;
   }

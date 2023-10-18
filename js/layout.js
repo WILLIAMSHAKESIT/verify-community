@@ -48,6 +48,10 @@ class Layout {
         $('.emoticon-box').hide()
         $(_this).siblings('emoji-picker').toggle()
     }
+    toggleEmoji2(_this){
+        $('.emoticon-box').hide()
+        $(_this).find('emoji-picker').toggle()
+    }
     toggleStickers(){
         $('emoji-picker').hide()
         $('.emoticon-box').toggle()
@@ -95,6 +99,10 @@ $(document).ready(function(){
     let layout = new Layout()
     layout.getTodayDate()
     layout.loadOwlCar()
+    $(window).click(function(e){
+        $('emoji-picker').hide()
+        $('#mobile-menu').removeClass('active')
+    })
     $('#toggleAllMenu').click(function(){
         $('.all-menu').slideToggle()
     })
@@ -113,14 +121,16 @@ $(document).ready(function(){
         },
         false
     );
-    $('.emoji i').click(function(){
+    $('.emoji i').click(function(e){
+        e.stopPropagation()
         layout.toggleEmoji(this)
     })
     $('.comment-form emoji-picker').on('emoji-click', function(event) {
         layout.insertEmoji(event)
     });
-    $('.change-profile .btn:nth-child(2)').click(function(){
-        layout.toggleEmoji(this)
+    $('.btn.emoji').click(function(e){
+        e.stopPropagation()
+        layout.toggleEmoji2(this)
     })
     $('.change-profile .btn:nth-child(1)').click(function(){
         layout.toggleStickers()
@@ -143,9 +153,6 @@ $(document).ready(function(){
     })
     $('#mobile-menu').click(function(e){
         e.stopPropagation()
-    })
-    $(window).click(function(e){
-        $('#mobile-menu').removeClass('active')
     })
     CKEDITOR.replace('editor1', {
         height: 300,

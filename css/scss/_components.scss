@@ -606,6 +606,7 @@ $border-left-color_4: #005aae;
     thead{
         th{
             color: #000;
+            vertical-align: middle;
         }
     }
     tbody{
@@ -879,7 +880,7 @@ details.comment[open] {
 
 .scroll-top{
     position: fixed;
-    bottom: 63px;
+    bottom: 30px;
     right: 30px;
     width: 40px;
     height: 40px;
