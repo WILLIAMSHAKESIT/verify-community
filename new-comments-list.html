@@ -43,7 +43,7 @@
             <div class="header-top-area d-none d-lg-block">
                 <div class="container-fluid container-full-padding">
                     <div class="row align-items-center">
-                        <div class="col-lg-6 d-none d-lg-block">
+                        <div class="col-lg-6 d-lg-block">
                             <div class="header-top-offer">
                                 <p class="header-date"></p>
                             </div>
@@ -52,7 +52,7 @@
                             <div class="header-top-right">
                                 <div class="header-social">
                                     <ul>
-                                        <li><a href="#"><i class="fas fa-user mr-2"></i>MIKESHINODA</li>
+                                        <li><a href="mypage.html"><i class="fas fa-user mr-2"></i>MIKESHINODA</li>
                                         <li><a href="#"><i class="fas fa-sign-out-alt mr-2"></i>로그아웃</li>
                                     </ul>
                                 </div>
@@ -61,11 +61,14 @@
                     </div>
                 </div>
             </div>
-            <div id="sticky-header" class="main-header">
+            <div id="sticky-header" class="main-header bottom-menu">
                 <div class="container-fluid container-full-padding">
                     <div class="row">
                         <div class="col-12">
                             <div class="main-menu">
+                                <a class="mobile-menu-toggle">
+                                    <i class="fas fa-bars"></i>
+                                </a>
                                 <nav>
                                     <div class="logo">
                                         <a href="index.html"><img src="img/logo/logo.png" alt="Logo"></a>
@@ -82,15 +85,15 @@
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                         <ul>
                                             <li class="show">
-                                                <a href="#">먹튀검증</a>
+                                                <a href="board-one.html">먹튀검증</a>
                                                 <ul class="submenu">
-                                                    <li><a href="#">먹튀 사이트 DB</a></li>
-                                                    <li><a href="#">먹튀검증소 소개</a></li>
+                                                    <li><a href="board-one.html">먹튀 사이트 DB</a></li>
+                                                    <li><a href="board-two.html">먹튀검증소 소개</a></li>
                                                     <li><a href="board-two.html">먹튀제보&신고</a></li>
                                                 </ul>
                                             </li>
                                             <li class="show">
-                                                <a href="#">인증사이트</a>
+                                                <a href="board-two.html">인증사이트</a>
                                                 <ul class="submenu">
                                                     <li><a href="#">안전인증 사이트</a></li>
                                                 </ul>
@@ -134,23 +137,7 @@
                                     </div>
                                     <div class="header-action">
                                         <ul>
-                                            <li class="header-shop-cart">
-                                                <a href="#">
-                                                    <i class="fas fa-bell"></i>
-                                                    <span>0</span>
-                                                </a>
-                                            </li>
-                                            <li class="header-shop-cart">
-                                                <a href="#">
-                                                    <i class="fas fa-envelope"></i>
-                                                    <span>0</span>
-                                                </a>
-                                            </li>
-                                            <li class="">
-                                                <a href="#">
-                                                    <i class="fas fa-search"></i>
-                                                </a>
-                                            </li>
+                                            
                                             <li class="">
                                                 <a href="#" id="toggleAllMenu">
                                                     <i class="fas fa-th"></i>
@@ -163,6 +150,10 @@
                         </div>
                     </div>
                 </div>
+                <a href="#" class="telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                    <span>@telegram_user</span>
+                </a>
             </div>
             <div class="all-menu">
                 <div class="container-full-padding">
@@ -339,7 +330,7 @@
             <section class="second-section">
                 <div class="row container-full-padding">
                     <div class="col-9">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center top-title">
                             <div class="page-title-wrapper my-5">
                                 <h3 class="page-title">
                                     새글모음   					
@@ -370,7 +361,7 @@
                             </button>
                         </div>
                         <div class="community-widget mb-4">
-                            <div class="p-2 my-row four-col">
+                            <div class="p-2 my-row four-col table-responsive">
                                 <table class="table table-hover">
                                     <thead class="">
                                       <tr>
@@ -646,7 +637,7 @@
                                             <td>1시간전</td>
                                         </tr>
                                     </tbody>
-                                  </table>
+                                </table>
                             </div>
                         </div>
                         <div class="w-100 d-flex align-items-center justify-content-center">

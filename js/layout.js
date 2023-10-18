@@ -44,9 +44,9 @@ class Layout {
             'top': newPosition + 'px'
         });
     }
-    toggleEmoji(){
+    toggleEmoji(_this){
         $('.emoticon-box').hide()
-        $('emoji-picker').toggle()
+        $(_this).siblings('emoji-picker').toggle()
     }
     toggleStickers(){
         $('emoji-picker').hide()
@@ -114,13 +114,13 @@ $(document).ready(function(){
         false
     );
     $('.emoji i').click(function(){
-        layout.toggleEmoji()
+        layout.toggleEmoji(this)
     })
     $('.comment-form emoji-picker').on('emoji-click', function(event) {
         layout.insertEmoji(event)
     });
     $('.change-profile .btn:nth-child(2)').click(function(){
-        layout.toggleEmoji()
+        layout.toggleEmoji(this)
     })
     $('.change-profile .btn:nth-child(1)').click(function(){
         layout.toggleStickers()
@@ -136,6 +136,16 @@ $(document).ready(function(){
     }),
     $(".scroll-top").on("click", function () {
         layout.toTop()
+    })
+    $('.mobile-menu-toggle').click(function(e){
+        e.stopPropagation()
+        $('#mobile-menu').toggleClass('active')
+    })
+    $('#mobile-menu').click(function(e){
+        e.stopPropagation()
+    })
+    $(window).click(function(e){
+        $('#mobile-menu').removeClass('active')
     })
     CKEDITOR.replace('editor1', {
         height: 300,

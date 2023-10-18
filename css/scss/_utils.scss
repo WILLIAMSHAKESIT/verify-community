@@ -80,6 +80,10 @@ h1, h2, h3, h4, h5, h6{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    span{
+        font-weight: 700;
+        color: #000000;
+    }
 }
 
 .nav{
@@ -128,7 +132,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .main-height{
-    min-height: 400px;
+    min-height: 328px;
 }
 
 .w-30{
@@ -143,4 +147,13 @@ h1, h2, h3, h4, h5, h6{
 .form-control:focus{
     border-color:#717171;
     box-shadow: unset !important;
+}
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.mobile-menu-toggle{
+    display: none;
 }

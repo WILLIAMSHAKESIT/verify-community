@@ -277,6 +277,7 @@ label{
     margin-top: 10px;
     li{
         margin-bottom: 8px;
+        width: calc(100% - 25px);
         a{
             display: flex;
             align-items: center;
@@ -309,6 +310,7 @@ label{
 .my-row{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
     flex-wrap: wrap;
     &.six-col{
@@ -667,12 +669,13 @@ $background-color_3: rgba(0, 0, 0, 0.3);
 .comment {
 	position: relative;
 	margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     &.parent-comment{
         // border-bottom: 1px solid #00000036;
         .comment-heading {
             &.parent-comment{
                 background-color: #f3f3f3;
+                border: 1px solid #0000001f;
             }
         }
     }
@@ -734,12 +737,12 @@ $background-color_3: rgba(0, 0, 0, 0.3);
 	margin-left: 28px;
 }
 .comment-border-link {
-	// display: block;
-	display: none;
+	display: block;
+	// display: none;
 	position: absolute;
 	top: 50px;
-	left: 0;
-	width: 12px;
+    left: 20px;
+    width: 3px;
 	height: calc(100% - 50px);
 	border-left: 1px solid transparent;
 	border-right: 1px solid transparent;
@@ -886,4 +889,10 @@ details.comment[open] {
     z-index: 20000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3882352941);
     cursor: pointer;
+}
+
+.modal-open{
+    .modal{
+        background: #0000008e !important;
+    }
 }
